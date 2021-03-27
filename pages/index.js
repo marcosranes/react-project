@@ -3,23 +3,23 @@ import { useState } from 'react';
 function Home() {
     return (
         <div>
-            <h3>Home</h3>
+            <h3>Home: In Construction...</h3>
             <Contador/>        
         </div>
     )
 }
 
 function Contador() {
-    const [contador, setContador] = useState(1);
+    let [contador, setContador] = useState(1);
 
     function adicionarContador() {
         setContador(contador + 1);
     }
     
     return (
-        <div>
-            <div>{contador}</div>
-            <button onclick={adicionarContador}>Adicionar</button>
+        <div> 
+            <h3>Event: {contador}</h3> 
+            <button onClick={adicionarContador}>Increment</button>
         </div>
     )
 }
